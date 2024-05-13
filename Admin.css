@@ -1,0 +1,17 @@
+#sidebar{
+    background-color: black;
+    width: 250px;
+    color: aliceblue;
+    height: 800px;
+    float: left;
+}
+.sidebar-title{
+    padding: 20px 50px; 
+}
+.sidebar-list{
+    padding: 60px;
+    padding-top: 40px;  
+}
+.sidebar-list-item{
+    margin-top: 40px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,intial-scale=1">
+    <title>Document</title>
+    <style>
+        .log{
+            display: block;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: bisque;
+            width: 18%;
+            margin: auto;
+            margin-top: 10%;
+            gap: 20%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-radius: 20px;
+        }
+        input{
+           
+            margin-left: 30px;
+          
+
+        }
+        label{
+            margin-left: 30px;
+          
+        }
+        button{
+            margin-top: 30px;
+           margin-left: 90px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form  class="log" >
+       
+        <label for="">Name</label>
+        <input type="text" placeholder="Name"><br>
+        <label for="">Email</label>
+        <input  id="submit"  type="email" placeholder="Email">
+        <label for="">Password</label>
+        <input  id="pass"  type="password" placeholder="Password"><br>  
+        <button type="submit" onclick="isValidEmail()">Submit</button>
+   
+    </form>
+    <script>
+        function isValidEmail()
+        {
+        let mail= document.getElementById('submit')
+        const regx=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+        let pass = document.getElementById('pass')
+        const regex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        
+        if((regx.test(mail.value)) && (regex.test(pass.value)))
+        {
+            alert("true");
+            console.log("true")
+        }
+        else
+        {
+            alert("false");
+           
+        }
+        }
+        
+    </script>
+</body>
+</html>
